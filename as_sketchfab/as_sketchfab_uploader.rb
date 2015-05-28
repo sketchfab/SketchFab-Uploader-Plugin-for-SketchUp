@@ -37,7 +37,7 @@ module AS_Extensions
                         :author_attribution   => true,
                         :texture_maps         => true,
                         :selectionset_only    => false,
-                        :preserve_instancing  => true }
+                        :preserve_instancing  => false }
 
       # Add the library path so Ruby can find it
       $: << File.dirname(__FILE__)+'/lib'
@@ -292,14 +292,12 @@ module AS_Extensions
               mat = d.get_element_value("materials").gsub(/"/, "'")
               tex = d.get_element_value("textures").gsub(/"/, "'")
               fac = d.get_element_value("faces").gsub(/"/, "'")
-              ins = d.get_element_value("instances").gsub(/"/, "'")
 
               # Adjust options from dialog
               (edg == "True") ? @options_hash[:edges] = true : @options_hash[:edges] = false
               (mat == "True") ? @options_hash[:materials_by_layer] = true : @options_hash[:materials_by_layer] = false
               (tex == "True") ? @options_hash[:texture_maps] = true : @options_hash[:texture_maps] = false
               (fac == "True") ? @options_hash[:doublesided_faces] = true : @options_hash[:doublesided_faces] = false
-              (ins == "True") ? @options_hash[:preserve_instancing] = true : @options_hash[:preserve_instancing] = false
 
               # Export model as KMZ and process
               if Sketchup.active_model.export @filename, @options_hash then
@@ -430,7 +428,6 @@ module AS_Extensions
               <p><label for="options">Options:</label><input class="cbox" type="checkbox" name="edges" id="edges" checked="true" value="True" /> Export edges<br />
               <input class="cbox" type="checkbox" style="margin-left:150px;" name="textures" id="textures" checked="true" value="True" /> Export textures<br />
               <input class="cbox" type="checkbox" style="margin-left:150px;" name="faces" id="faces" value="" /> Export two-sided faces<br />
-              <input class="cbox" type="checkbox" style="margin-left:150px;" name="instances" id="instances" checked="true" value="True" /> Preserve component hierarchy<br />
               <input class="cbox" type="checkbox" style="margin-left:150px;" name="materials" id="materials" value="" /> Use 'color by layer' materials
               </p>
               <p><input type="submit" id="submit" value="Submit Model" style="font-weight:bold;" /></p>
