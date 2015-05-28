@@ -1,4 +1,4 @@
-module AS_SketchfabUploader
+module AS_Extensions::AS_SketchfabUploader
 # This file namespaces and compiles the multipart-post library
 
 #--
