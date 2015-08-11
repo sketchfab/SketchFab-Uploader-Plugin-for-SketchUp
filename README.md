@@ -17,3 +17,7 @@ Website:        http://www.alexschreyer.net/projects/sketchfab-uploader-plugin-f
 Description :   This plugin uploads the currently open model to Sketchfab.com
 
 Usage :         File menu > Upload to Sketchfab
+
+Version 2.2
+- Removes Component Hierarchy option
+- Updates logo
