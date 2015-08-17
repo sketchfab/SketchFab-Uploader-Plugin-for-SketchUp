@@ -14,8 +14,8 @@ Website:        http://www.alexschreyer.net/projects/sketchfab-uploader-plugin-f
 
 Name :          Sketchfab Uploader
 
-Version:        2.1
-Date :          3/17/2014
+Version:        2.1.1
+Date :          5/28/2015
 
 Description :   This plugin uploads the currently open model to Sketchfab.com
 
@@ -61,6 +61,9 @@ History:        1.0 (7/13/2012):
                 - Wrapped external modules in my namespace
                 - Consolidated code
                 - Switched export location to TEMP folder
+                2.1.1 (5/28/2015):
+                - Fixed namespaces and dependancies
+                - Disabled and hidden "Preserve Instances" option
                 TBD:
                 - Code cleanup
 

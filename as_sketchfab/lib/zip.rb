@@ -1,4 +1,4 @@
-module AS_SketchfabUploader
+module AS_Extensions::AS_SketchfabUploader
 # A small module to zip files
 
     module Zip
